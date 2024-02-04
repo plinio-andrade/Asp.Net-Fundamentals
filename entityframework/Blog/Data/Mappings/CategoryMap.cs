@@ -15,6 +15,7 @@ public class CategoryMap : IEntityTypeConfiguration<Category>
         // Primary key
         builder.HasKey(x => x.Id);
 
+        // Identity
         builder.Property(x => x.Id)
             .ValueGeneratedOnAdd()
             .UseIdentityColumn(); // PRIMARY KEY IDENTITY (1, 1)

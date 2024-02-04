@@ -14,6 +14,7 @@ public class PostMap : IEntityTypeConfiguration<Post>
         // Primary Key
         builder.HasKey(x => x.Id);
 
+        // Identity
         builder.Property(x => x.Id)
             .ValueGeneratedOnAdd()
             .UseIdentityColumn(); // PRIMARY KEY IDENTITY (1, 1)
